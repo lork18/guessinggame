@@ -13,20 +13,21 @@ public class GuessingGame {
 	}
 	
 	public static void main (String[] args){
-		System.out.println("Enter your guess: ");
-		int guess = in.nextInt();
-		int number = generateRandomInt();
-		if(guess > number){
-			System.out.println("Too high.");
-			System.out.println("The number was " + number);
-		}
-		else if(guess < number){
-			System.out.println("Too low.");
-			System.out.println("The number was " + number);
-		}
-		else{
-			System.out.println("You got it!");
-			System.out.println("The number was " + number);
+                int number = generateRandomInt();
+		while(true){
+			System.out.println("Enter your guess: ");
+			int guess = in.nextInt();	
+			if(guess > number){
+				System.out.println("Too high.");
+			}
+			else if(guess < number){
+				System.out.println("Too low.");
+			}
+			else{
+				System.out.println("You got it!");
+				System.out.println("The number was " + number);
+				break;
+			}
 		}
 	}
 }
